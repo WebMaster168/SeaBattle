@@ -54,7 +54,7 @@ export class StatsRenderer {
  
                 <div class="mini-stat">
  
-                    <span>🚢</span>
+                    <span class="span-stat">🚢</span>
  
                     <span class="sunk">
                         ${stats.sunk}/10
