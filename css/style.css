@@ -131,14 +131,14 @@ h2 {
     display: grid;
  
     grid-template-columns:
-        repeat(10, 40px);
+        repeat(10, var(--cell-size));
  
     align-items: center;
  
     justify-items: center;
  
     font-weight: 600;
- 
+    gap: 2px;
     color: #8eb9ff;
 }
  
@@ -149,14 +149,14 @@ h2 {
     display: grid;
  
     grid-template-rows:
-        repeat(10, 40px);
+        repeat(10, var(--cell-size));
  
     align-items: center;
  
     justify-items: center;
  
     font-weight: 600;
- 
+    gap: 2px;
     color: #8eb9ff;
 }
  
