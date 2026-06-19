@@ -3,7 +3,6 @@
     --bg: #081b33;
  
     --cell: #0f2a47;
-    --cell-size:40px;
  
     --cell-hover: #173d66;
  
@@ -31,7 +30,7 @@ body {
     padding: 40px;
  
     font-family: Arial, sans-serif;
-    overflow: hidden;
+ 
     background:
         radial-gradient(
             circle at top,
@@ -70,19 +69,15 @@ h2 {
  
 .boards {
  
-    
- 
-    
-
-    width: 100vw;
-    height: calc(100vh - 120px);
- 
     display: flex;
  
     justify-content: center;
-    align-items: center;
  
-    gap: 30px;
+    align-items: flex-start;
+ 
+    gap: 80px;
+ 
+    flex-wrap: wrap;
 }
  
 /* ===== BOARD LAYOUT ===== */
@@ -158,16 +153,10 @@ h2 {
     display: grid;
  
     grid-template-columns:
-        repeat(
-            10,
-            var(--cell-size)
-        );
+        repeat(10, 40px);
  
     grid-template-rows:
-        repeat(
-            10,
-            var(--cell-size)
-        );
+        repeat(10, 40px);
  
     gap: 2px;
 }
@@ -176,9 +165,9 @@ h2 {
  
 .cell {
  
-    width: var(--cell-size);
+    width: 40px;
  
-    height: var(--cell-size);
+    height: 40px;
  
     background: var(--cell);
  
@@ -724,10 +713,4 @@ h2 {
     100% {
         transform: rotate(90deg);
     }
-}
-
-#game-scale{
-    width: fit-content;
-    margin: 0 auto;
-    transform-origin: top center;
 }
