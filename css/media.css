@@ -4,7 +4,9 @@
     }*/
 }
 @media (max-width: 900px) {
- 
+    :root{
+        --cell-size:24px;
+    }
     .boards {
  
         flex-direction: column;
@@ -13,9 +15,25 @@
  
         gap: 20px;
     }
- 
+    .column-labels{
+
+        gap: 2px;
+    }
+    h1 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    h1 span svg
+ {
+    
+    height: 14px;
+    width: 16px;
+}
+    .row-labels{
+        gap: 2px;
+    }
     .wrapper {
- 
+        margin: 0 auto;
         order: 2;
     }
  

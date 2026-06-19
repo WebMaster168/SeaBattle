@@ -4,6 +4,8 @@
  
     --cell: #0f2a47;
  
+    --cell-size: 40px;
+
     --cell-hover: #173d66;
  
     --ship: #2157ff;
@@ -42,6 +44,9 @@ body {
  
     text-align: center;
 }
+.mobile-controls{
+    display: none;
+}
 .mobile-controls button{
     background: blueviolet;
     color: white;
@@ -49,8 +54,9 @@ body {
     border: none;
     border-radius: 8px;
     font-size: 24px;
-    display: none;
+    
 }
+
 h1 {
  
     font-size: 48px;
@@ -94,9 +100,9 @@ h2 {
  
     display: grid;
  
-    grid-template-columns: 40px auto;
+    grid-template-columns: var(--cell-size) auto;
  
-    grid-template-rows: 40px auto;
+    grid-template-rows: var(--cell-size) auto;
  
     background: rgba(255,255,255,.03);
  
@@ -161,10 +167,10 @@ h2 {
     display: grid;
  
     grid-template-columns:
-        repeat(10, 40px);
+        repeat(10, var(--cell-size));
  
     grid-template-rows:
-        repeat(10, 40px);
+        repeat(10, var(--cell-size));
  
     gap: 2px;
 }
@@ -173,9 +179,9 @@ h2 {
  
 .cell {
  
-    width: 40px;
+    width: var(--cell-size);
  
-    height: 40px;
+    height: var(--cell-size);
  
     background: var(--cell);
  
@@ -296,12 +302,12 @@ h2 {
     display: grid;
  
     grid-template-columns:
-        repeat(10, 40px);
+        repeat(10, var(--cell-size));
  
     align-items: center;
  
     justify-items: center;
- 
+    
     font-weight: bold;
 }
  
@@ -310,7 +316,7 @@ h2 {
     display: grid;
  
     grid-template-rows:
-        repeat(10, 40px);
+        repeat(10, var(--cell-size));
  
     align-items: center;
  
