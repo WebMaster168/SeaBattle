@@ -725,3 +725,9 @@ h2 {
         transform: rotate(90deg);
     }
 }
+
+#game-scale{
+    width: fit-content;
+    margin: 0 auto;
+    transform-origin: top center;
+}

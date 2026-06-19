@@ -1,43 +1,5 @@
-@media(max-width: 900px){
+@media(max-width: 768px){
     h1{
-        font-size: 40px;
-        margin: 10px 0;
-    }
-    .cell{
-        width: 24px;
-        height: 24px;
-    }
-}
-
-@media screen and (max-heigth: 500px){
-    :root{
-        --cell-size:24px;
-    }
-}
-
-@media screen and (max-height:500px) {
- 
-    :root {
- 
-        --cell-size: 24px;
-    }
- 
-    .boards {
- 
-        height: 100vh;
-        flex-direction: column;
-        gap: 15px;
-    }
- 
-    h1 {
- 
-        font-size: 32px;
- 
-        margin: 5px;
-    }
- 
-    h2 {
- 
-        font-size: 18px;
+        font-size: 16px;
     }
 }
