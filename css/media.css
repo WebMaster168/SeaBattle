@@ -1,5 +1,65 @@
 @media(max-width: 768px){
-    h1{
+    /*h1{
         font-size: 16px;
+    }*/
+}
+@media (max-width: 900px) {
+ 
+    .boards {
+ 
+        flex-direction: column;
+ 
+        height: auto;
+ 
+        gap: 20px;
+    }
+ 
+    .wrapper {
+ 
+        order: 2;
+    }
+ 
+    .player-section,
+    .bot-section {
+ 
+        width: 100%;
+ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .mobile-controls {
+ 
+        display: flex;
+        justify-content: center;
+ 
+        margin: 15px 0;
+    }
+ 
+    #toggle-board-btn {
+ 
+        padding: 12px 20px;
+ 
+        border: none;
+ 
+        border-radius: 12px;
+ 
+        background: linear-gradient(
+            135deg,
+            #0ea5e9,
+            #2563eb
+        );
+ 
+        color: white;
+ 
+        font-size: 16px;
+ 
+        cursor: pointer;
+    }
+ 
+    .hidden-mobile {
+ 
+        display: none;
     }
 }

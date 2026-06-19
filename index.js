@@ -1,57 +1,79 @@
 import { GameController } from "./game/GameController.js";
 import { OrientationHandler } from "./ui/OrientationHandler.js";
  
-function scaleGame() {
+const toggleBtn =
+    document.getElementById(
+        "toggle-board-btn"
+    );
  
-    const root =
-        document.getElementById(
-            "game-root"
+const playerSection =
+    document.querySelector(
+        ".player-section"
+    );
+ 
+const botSection =
+    document.querySelector(
+        ".bot-section"
+    );
+ 
+let showingPlayer = false;
+ 
+function updateMobileView() {
+ 
+    if (window.innerWidth > 900)
+        return;
+ 
+    if (showingPlayer) {
+ 
+        playerSection.classList.remove(
+            "hidden-mobile"
         );
  
-    if (!root) return;
- 
-    root.style.transform =
-        "scale(1)";
- 
-    const scaleX =
-        window.innerWidth /
-        root.offsetWidth;
- 
-    const scaleY =
-        window.innerHeight /
-        root.offsetHeight;
- 
-    const scale =
-        Math.min(
-            scaleX,
-            scaleY,
-            1
+        botSection.classList.add(
+            "hidden-mobile"
         );
  
-    root.style.transform =
-        `scale(${scale})`;
+        toggleBtn.textContent =
+            "Показать поле врага";
+ 
+    } else {
+ 
+        botSection.classList.remove(
+            "hidden-mobile"
+        );
+ 
+        playerSection.classList.add(
+            "hidden-mobile"
+        );
+ 
+        toggleBtn.textContent =
+            "Показать своё поле";
+    }
 }
+ 
+toggleBtn.addEventListener(
+    "click",
+    () => {
+ 
+        showingPlayer =
+            !showingPlayer;
+ 
+        updateMobileView();
+    }
+);
  
 window.addEventListener(
     "resize",
-    scaleGame
+    updateMobileView
 );
  
-window.addEventListener(
-    "orientationchange",
-    scaleGame
-);
+updateMobileView();
  
-OrientationHandler.init();
+//OrientationHandler.init();
  
 const game =
     new GameController();
  
 game.start();
+
  
-/*
- * Ждём пока отрисуются поля
- */
-requestAnimationFrame(() => {
-    scaleGame();
-});
