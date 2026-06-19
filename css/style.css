@@ -3,6 +3,7 @@
     --bg: #081b33;
  
     --cell: #0f2a47;
+    --cell-size:40px;
  
     --cell-hover: #173d66;
  
@@ -30,7 +31,7 @@ body {
     padding: 40px;
  
     font-family: Arial, sans-serif;
- 
+    overflow: hidden;
     background:
         radial-gradient(
             circle at top,
@@ -69,15 +70,19 @@ h2 {
  
 .boards {
  
+    
+ 
+    
+
+    width: 100vw;
+    height: calc(100vh - 120px);
+ 
     display: flex;
  
     justify-content: center;
+    align-items: center;
  
-    align-items: flex-start;
- 
-    gap: 80px;
- 
-    flex-wrap: wrap;
+    gap: 30px;
 }
  
 /* ===== BOARD LAYOUT ===== */
@@ -153,10 +158,16 @@ h2 {
     display: grid;
  
     grid-template-columns:
-        repeat(10, 40px);
+        repeat(
+            10,
+            var(--cell-size)
+        );
  
     grid-template-rows:
-        repeat(10, 40px);
+        repeat(
+            10,
+            var(--cell-size)
+        );
  
     gap: 2px;
 }
@@ -165,9 +176,9 @@ h2 {
  
 .cell {
  
-    width: 40px;
+    width: var(--cell-size);
  
-    height: 40px;
+    height: var(--cell-size);
  
     background: var(--cell);
  
