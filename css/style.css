@@ -626,6 +626,59 @@ h2 {
     box-shadow:
         0 0 20px cyan;
 }
+.turn-banner {
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    gap: 15px;
+ 
+    width: 90%;
+ 
+    max-width: 500px;
+ 
+    margin: 15px auto 20px;
+ 
+    padding: 16px 20px;
+ 
+    border-radius: 18px;
+ 
+    background:
+        rgba(8, 25, 55, .8);
+ 
+    backdrop-filter: blur(12px);
+ 
+    border:
+        1px solid rgba(255,255,255,.08);
+ 
+    box-shadow:
+        0 0 20px rgba(0,0,0,.25);
+}
+ 
+.turn-icon {
+ 
+    font-size: 34px;
+}
+ 
+.turn-title {
+ 
+    color: #fbbf24;
+ 
+    font-size: 18px;
+ 
+    font-weight: 700;
+}
+ 
+.turn-subtitle {
+ 
+    color: #94a3b8;
+ 
+    font-size: 14px;
+}
+.turn-banner {
+    display: none;
+}
 .scanner {
  
     position: absolute;
